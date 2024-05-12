@@ -1,0 +1,991 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6511605-2e42-4594-80b0-3731f6972f7c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Original Global Weather Repository</ID>
+  <Name>Original Global Weather Repository</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Original GlobalWeatherRepository</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5822" scrolltop="-3903" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="16722" y="12806" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Original GlobalWeatherRepository" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5038" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000ae13000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Original GlobalWeatherRepository" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5822</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3903</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="1ec5f4bd-388d-44ee-8996-04a5fdd82adc">
+    <DataSourceViewID>Global Weather</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1349deb5-3763-49e0-ad70-17f3a9b0da53">
+      <ID>Air Quality Carbon Monoxide</ID>
+      <Name>Air Quality Carbon Monoxide</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fb91d775-23b4-4c86-95e2-7490be90b084">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ef9fef0b-e9d2-45d8-b569-0656c241c5ba">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_Carbon_Monoxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="95ffa2d4-feae-4168-80ac-d2d7112569a9">
+      <ID>Air Quality Nitrogen Dioxide</ID>
+      <Name>Air Quality Nitrogen Dioxide</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ecf50f0a-a89a-475d-9bc4-ebdfd0d1a68f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9c8d17a-3109-45ae-a7ca-14c12a014c6b">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_Nitrogen_dioxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="09c26aba-bdd9-4b8b-8471-81ff50ef9c77">
+      <ID>Air Quality Ozone</ID>
+      <Name>Air Quality Ozone</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b81ff0ab-7bf5-4e01-9d6e-dd2a5017f57b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de8b1b19-75fe-4551-88f4-8fa78ea905ac">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_Ozone</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c151f9c9-e207-44d2-b97b-836d933fea75">
+      <ID>Air Quality PM10</ID>
+      <Name>Air Quality PM10</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="82e39220-b97f-4a11-b685-ba1d5bc93f6a">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1522d0ed-7638-45af-9f67-769984ea5ecd">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_PM10</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="af0833e3-2c58-42ba-ba58-be92570c2abc">
+      <ID>Air Quality PM2 5</ID>
+      <Name>Air Quality PM2 5</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0928e850-78e5-4c45-996a-278fe7e2afb3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05290f13-3678-4f11-8ff9-1f1e1ea8a771">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_PM2_5</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0be55b86-e552-4ef9-a796-3bfdaa422c75">
+      <ID>Air Quality Sulphur Dioxide</ID>
+      <Name>Air Quality Sulphur Dioxide</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6adc4c33-1ebe-4d3c-ad18-c9077877dc64">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62132ec3-4ec4-4024-9824-1e5c25da5a9e">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>air_quality_Sulphur_dioxide</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a1b3a30f-c2a0-4a33-8a9a-2232341dc26c">
+      <ID>Cloud</ID>
+      <Name>Cloud</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a878fb1c-0147-4547-bbfa-7d00b6a6d34b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7483f381-c85f-4ad5-9a34-67bf89351b6f">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>cloud</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="53799632-3e2d-4446-bc58-2aeeb0864a4c">
+      <ID>Condition Text</ID>
+      <Name>Condition Text</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="03628767-77b8-49d0-b576-65f0c50b6cdc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a1aaf225-2cf2-42b0-89cd-9690d2ced88f">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>condition_text</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6efb9964-3671-43f8-afdc-ac3b41350861">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e9346eb-92ae-4b9d-a899-f3f4a73a9193">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5b771a93-b15c-4208-aca8-da3ac4d9f6aa">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>country</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5806855d-2f53-4554-9832-f979e5501fc5">
+      <ID>Day</ID>
+      <Name>Day</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68d01060-adf5-4bf9-9564-9765cd4524b2">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b27c61d-d58b-4404-8d00-968c78526906">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e25f7476-e762-4cbb-88d2-05236bab3822">
+      <ID>Feels Like Celsius</ID>
+      <Name>Feels Like Celsius</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6b60ef44-5af4-4e7e-95d7-b559e82b1f9d">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94042d66-0ae9-4670-8ec5-fa8700af66f7">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>feels_like_celsius</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9e5ed4d4-e793-4aa6-a4eb-d6ac584ea20c">
+      <ID>Gust Kph</ID>
+      <Name>Gust Kph</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="af326f1b-6f88-4074-8de9-4bd2c65c97ae">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15493b91-0b21-450d-989a-165c83b3cd00">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>gust_kph</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b8d64a54-127b-40d9-93a6-5aa14a52a622">
+      <ID>Humidity</ID>
+      <Name>Humidity</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="711cdc3e-459f-4173-9350-81c5f8fa2df9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb5080fe-dfaf-476f-9cf5-b6f9bde03684">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>humidity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fb37ae44-acc3-448d-ae49-80201fa54283">
+      <ID>Id Fact</ID>
+      <Name>Id Fact</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e095e909-d5fb-4d6e-80fa-e60206de9883">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4277deaf-ab4d-4270-ac17-d87c50c45c23">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>id_fact</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ec170280-d1be-4a0d-8c37-17144bb2a7f0">
+      <ID>Latitude</ID>
+      <Name>Latitude</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46c6479c-597a-465d-9539-fad488d6099e">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3521f929-b922-44da-8be0-80dd1871e0f2">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>latitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0f196630-8c14-4da8-bbbe-264f490d15ba">
+      <ID>Location Name</ID>
+      <Name>Location Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8be99496-355d-425b-b547-b4b75d4bfafc">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="943b870e-0a7c-42a1-a0b4-621cf405b57f">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>location_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1d8dfdff-fae2-4538-b8a3-332b19e9a1c5">
+      <ID>Longitude</ID>
+      <Name>Longitude</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="343d7f7d-f32b-41a9-867d-d56cebd84b5a">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c70d1f4-7df3-4a73-a00b-53528fc4b3c5">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>longitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b49bbd0f-1a93-4e3f-bd13-0b8f21f26c49">
+      <ID>Month</ID>
+      <Name>Month</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65aeb96f-3ee8-4c9c-8ec0-b677c4e02861">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="45e794e0-4124-42a5-8b79-5c2cf7c0fa3d">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="182a54d2-ffaa-4949-9701-65a56728f132">
+      <ID>Precip Mm</ID>
+      <Name>Precip Mm</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e62829d2-c34d-4722-a300-3f499431dbdd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="528fe803-7843-47a5-99ff-4769e5fb96a5">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>precip_mm</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4dc9229c-febe-4b4d-8d90-d401b49f3606">
+      <ID>Pressure Mb</ID>
+      <Name>Pressure Mb</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df23da1a-c427-456f-b6bf-eca924dbca35">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="93263ad1-cc77-4da5-993c-63ec7ab7267d">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>pressure_mb</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6f7e100f-b91b-42e4-88d3-6f7b41e0cb20">
+      <ID>Temperature Celsius</ID>
+      <Name>Temperature Celsius</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb759729-8617-4ffc-bc98-6b3a163eeb4e">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bdc59558-6531-4e63-8aff-92c45da70eda">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>temperature_celsius</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e6019338-25a3-47ed-aad9-a5bb60269140">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <Type>Date</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="04a0dde8-b3ba-4aad-8d26-87973dd8b396">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2212231-8eea-47c4-b737-5c7cc4fbfa16">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b728929-601c-4135-8469-f6d42a590ac1">
+      <ID>Timezone</ID>
+      <Name>Timezone</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a622248b-85c3-4ffc-b28d-06390d757e77">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8fd1add-0795-4b83-bc1c-d8ef7c16bb6c">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>timezone</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e2b79b06-0e66-4bd8-a768-b5e835bd756e">
+      <ID>Uv Index</ID>
+      <Name>Uv Index</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4e82bb5d-0333-4e5a-a5a4-634058c05134">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="eaa178b2-b747-4529-8042-11149814c454">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>uv_index</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="527aae1f-c823-4bcc-a224-0e47c063909a">
+      <ID>Visibility Km</ID>
+      <Name>Visibility Km</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f4c86a76-9b76-409e-bf23-f54b897eb3b6">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="95ff967e-22b5-40cc-8be9-c4a2a618f8f7">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>visibility_km</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b4f24618-6831-4083-a824-48b23179e2ee">
+      <ID>Wind Degree</ID>
+      <Name>Wind Degree</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f201fa09-31e0-4eab-a1c0-4eda12a8edb8">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2b4b838-e27b-417e-a0dc-9ab329da34ab">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>wind_degree</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5681d50c-42c1-47a0-b0da-fe9dfbf19963">
+      <ID>Wind Direction</ID>
+      <Name>Wind Direction</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6a6dd7e-6fa3-4eb3-9dfd-a512dea16554">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9089ab2-26f9-47c9-afcf-4ae3bb9de4a5">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>wind_direction</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8d3349d7-4a24-4314-9268-0ef6f457d168">
+      <ID>Wind Kph</ID>
+      <Name>Wind Kph</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ae3ff4c-1a38-496c-8526-2d006e194763">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="984d7f46-931c-4470-b659-8f1e9e6d8d04">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>wind_kph</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="673449cb-3f25-46d2-9ff6-33f25f2a0172">
+      <ID>Year</ID>
+      <Name>Year</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="561139e6-ab81-4a86-8c83-e574e73659b7">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="07213475-8000-4722-bb22-3ebd118e7fac">
+            <TableID>dbo_Original_x0020_GlobalWeatherRepository</TableID>
+            <ColumnID>year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="f2afbf4c-054e-47b0-9bcd-36d5184a7e35">
+      <ID>Original Global Weather Repository</ID>
+      <Name>Original Global Weather Repository</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="cc648ad7-1748-4e70-8c47-057184323e21">
+          <ID>Air Quality Carbon Monoxide</ID>
+          <Name>Air Quality Carbon Monoxide</Name>
+          <SourceColumnID>Air Quality Carbon Monoxide</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="eb6f0ffe-746b-4c0b-9537-0a5d41c4ca6e">
+          <ID>Air Quality Nitrogen Dioxide</ID>
+          <Name>Air Quality Nitrogen Dioxide</Name>
+          <SourceColumnID>Air Quality Nitrogen Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d1978e60-1e29-4a81-b716-e7344e3e1e6d">
+          <ID>Air Quality Ozone</ID>
+          <Name>Air Quality Ozone</Name>
+          <SourceColumnID>Air Quality Ozone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ac512118-0331-4cff-a3b9-7726d6358766">
+          <ID>Air Quality PM10</ID>
+          <Name>Air Quality PM10</Name>
+          <SourceColumnID>Air Quality PM10</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="7020472f-4d16-4ec8-b4b7-68d8c44b91b2">
+          <ID>Air Quality PM2 5</ID>
+          <Name>Air Quality PM2 5</Name>
+          <SourceColumnID>Air Quality PM2 5</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="548a290c-19c1-4169-80dc-1e68972e55a2">
+          <ID>Air Quality Sulphur Dioxide</ID>
+          <Name>Air Quality Sulphur Dioxide</Name>
+          <SourceColumnID>Air Quality Sulphur Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0bb8bc5a-1e1f-4bb4-a1b2-77e2b839c0d2">
+          <ID>Cloud</ID>
+          <Name>Cloud</Name>
+          <SourceColumnID>Cloud</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d39b5ca5-3b5c-4456-990a-8c1c9edef988">
+          <ID>Condition Text</ID>
+          <Name>Condition Text</Name>
+          <SourceColumnID>Condition Text</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="868634b4-95e9-4b09-b7d8-0546d47e05c9">
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <SourceColumnID>Country</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="27803a6f-6641-4a0e-bb64-79498b9457e9">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <SourceColumnID>Day</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="3152b986-7ef1-4b82-a64e-a8de65e3fc87">
+          <ID>Feels Like Celsius</ID>
+          <Name>Feels Like Celsius</Name>
+          <SourceColumnID>Feels Like Celsius</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="909ef5af-0cde-40d7-9ff6-f8bc53ed728f">
+          <ID>Gust Kph</ID>
+          <Name>Gust Kph</Name>
+          <SourceColumnID>Gust Kph</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="4b385d3a-e05c-4fa6-b68d-bcedef401903">
+          <ID>Humidity</ID>
+          <Name>Humidity</Name>
+          <SourceColumnID>Humidity</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="7e439db6-30c3-425e-8089-e1d708e4e457">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="1ea9a638-efe1-4e82-83df-1b931bc0f8a1">
+          <ID>Latitude</ID>
+          <Name>Latitude</Name>
+          <SourceColumnID>Latitude</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="024155f2-e1e5-425a-b07a-f31f1ed8c220">
+          <ID>Location Name</ID>
+          <Name>Location Name</Name>
+          <SourceColumnID>Location Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="794c910a-273d-4173-a1d7-53ebef29f0a2">
+          <ID>Longitude</ID>
+          <Name>Longitude</Name>
+          <SourceColumnID>Longitude</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d0f16311-4fd5-4e4b-8210-2271b5d4f12c">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <SourceColumnID>Month</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="52e2cca2-fbed-468e-be71-1131b6ead96f">
+          <ID>Precip Mm</ID>
+          <Name>Precip Mm</Name>
+          <SourceColumnID>Precip Mm</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ddbcb7e8-8796-40e7-a3ec-b4f8c0733326">
+          <ID>Pressure Mb</ID>
+          <Name>Pressure Mb</Name>
+          <SourceColumnID>Pressure Mb</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="05f6d0d5-be56-4746-bf87-5bcdba459253">
+          <ID>Temperature Celsius</ID>
+          <Name>Temperature Celsius</Name>
+          <SourceColumnID>Temperature Celsius</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="f1870489-be5e-4fc3-931f-416226fbf012">
+          <ID>Time</ID>
+          <Name>Time</Name>
+          <SourceColumnID>Time</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="0c8ae521-f129-47ce-8b49-f2a36a2dc444">
+          <ID>Timezone</ID>
+          <Name>Timezone</Name>
+          <SourceColumnID>Timezone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="248b8188-402b-4ec8-910d-41a8145ab2e0">
+          <ID>Uv Index</ID>
+          <Name>Uv Index</Name>
+          <SourceColumnID>Uv Index</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1e7a89cb-a9ec-4be0-ae02-54d830cc7841">
+          <ID>Visibility Km</ID>
+          <Name>Visibility Km</Name>
+          <SourceColumnID>Visibility Km</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e22c78d4-74a6-49d8-a6b7-b5cab68cdff1">
+          <ID>Wind Degree</ID>
+          <Name>Wind Degree</Name>
+          <SourceColumnID>Wind Degree</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="0750a90e-d488-400b-bf7b-1ac24b619e70">
+          <ID>Wind Direction</ID>
+          <Name>Wind Direction</Name>
+          <SourceColumnID>Wind Direction</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0b1bcc2e-7ec6-4c12-885b-f475c5d28421">
+          <ID>Wind Kph</ID>
+          <Name>Wind Kph</Name>
+          <SourceColumnID>Wind Kph</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="80848272-a23c-413e-bf01-2d4b15a322ff">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceColumnID>Year</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="6d381bef-b9ac-403c-955d-0478ace40560">
+      <ID>Clustering</ID>
+      <Name>Clustering</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="32cd3f3a-2a33-4d5b-ab45-b9636afe8259">
+          <ID>Air Quality Carbon Monoxide</ID>
+          <Name>Air Quality Carbon Monoxide</Name>
+          <SourceColumnID>Air Quality Carbon Monoxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7d319f53-8630-4dae-a5e4-7b72a38af4bb">
+          <ID>Air Quality Nitrogen Dioxide</ID>
+          <Name>Air Quality Nitrogen Dioxide</Name>
+          <SourceColumnID>Air Quality Nitrogen Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1afcf1c0-2d54-4a77-ae73-8729b59000ab">
+          <ID>Air Quality Ozone</ID>
+          <Name>Air Quality Ozone</Name>
+          <SourceColumnID>Air Quality Ozone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e80055d9-9b52-4b5b-b927-c888e4ef20d1">
+          <ID>Air Quality PM10</ID>
+          <Name>Air Quality PM10</Name>
+          <SourceColumnID>Air Quality PM10</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8621a2f8-f94e-40f9-b165-a470dff4f94c">
+          <ID>Air Quality PM2 5</ID>
+          <Name>Air Quality PM2 5</Name>
+          <SourceColumnID>Air Quality PM2 5</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a56c82e6-cdbf-45a0-884c-4dd7ecc8fd85">
+          <ID>Air Quality Sulphur Dioxide</ID>
+          <Name>Air Quality Sulphur Dioxide</Name>
+          <SourceColumnID>Air Quality Sulphur Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4b3f8db4-ef00-47b7-80b3-df60d0fae325">
+          <ID>Cloud</ID>
+          <Name>Cloud</Name>
+          <SourceColumnID>Cloud</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="47548087-4f84-4805-872f-4c8d5556416d">
+          <ID>Condition Text</ID>
+          <Name>Condition Text</Name>
+          <SourceColumnID>Condition Text</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="ed42b6dd-683f-4572-9e9a-7a707e037b83">
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <SourceColumnID>Country</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8add0066-633e-4f83-9c36-57c6979fe0c9">
+          <ID>Day</ID>
+          <Name>Day</Name>
+          <SourceColumnID>Day</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b17e1570-b0b8-47ed-b658-65ada3d225ae">
+          <ID>Feels Like Celsius</ID>
+          <Name>Feels Like Celsius</Name>
+          <SourceColumnID>Feels Like Celsius</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee1c5282-b075-4673-8249-994a7b05434f">
+          <ID>Gust Kph</ID>
+          <Name>Gust Kph</Name>
+          <SourceColumnID>Gust Kph</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c1d25b1e-be12-46bd-9ea9-26e3eea80ab2">
+          <ID>Humidity</ID>
+          <Name>Humidity</Name>
+          <SourceColumnID>Humidity</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="016fb108-6be6-4505-b690-da78bc1a8ef7">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="78a8afd6-f742-4463-95b2-c2396f020b3a">
+          <ID>Latitude</ID>
+          <Name>Latitude</Name>
+          <SourceColumnID>Latitude</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3adeafb8-59f5-45ed-a17d-8e75b9dc4a45">
+          <ID>Location Name</ID>
+          <Name>Location Name</Name>
+          <SourceColumnID>Location Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="911f2753-120e-472e-97f8-f2906efbe4e2">
+          <ID>Longitude</ID>
+          <Name>Longitude</Name>
+          <SourceColumnID>Longitude</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2694829e-153b-44bd-924f-a796bef08308">
+          <ID>Month</ID>
+          <Name>Month</Name>
+          <SourceColumnID>Month</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0673deb4-1be1-4c3d-9c43-6e8e76d7ab75">
+          <ID>Precip Mm</ID>
+          <Name>Precip Mm</Name>
+          <SourceColumnID>Precip Mm</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="73f1a06b-1079-44a3-b90d-c3f618533340">
+          <ID>Pressure Mb</ID>
+          <Name>Pressure Mb</Name>
+          <SourceColumnID>Pressure Mb</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f9416c59-a804-4141-bd37-386f2722a42f">
+          <ID>Temperature Celsius</ID>
+          <Name>Temperature Celsius</Name>
+          <SourceColumnID>Temperature Celsius</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7489b64f-62f2-4623-8854-19795aa7a9bc">
+          <ID>Time</ID>
+          <Name>Time</Name>
+          <SourceColumnID>Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d5bce502-de4f-48ee-9b66-b379361d29fb">
+          <ID>Timezone</ID>
+          <Name>Timezone</Name>
+          <SourceColumnID>Timezone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="62445a50-aef5-43f8-aec7-ac3343c4c8eb">
+          <ID>Uv Index</ID>
+          <Name>Uv Index</Name>
+          <SourceColumnID>Uv Index</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f36e37b0-ca32-478c-b59b-0101bd01f7ee">
+          <ID>Visibility Km</ID>
+          <Name>Visibility Km</Name>
+          <SourceColumnID>Visibility Km</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1d09f8c5-79fe-4d0b-b34d-ef8c65241704">
+          <ID>Wind Degree</ID>
+          <Name>Wind Degree</Name>
+          <SourceColumnID>Wind Degree</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9e5ed8c7-6773-4ce5-b5fd-f2bb64535742">
+          <ID>Wind Direction</ID>
+          <Name>Wind Direction</Name>
+          <SourceColumnID>Wind Direction</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e14168a3-0de0-489d-b4eb-cbbaa7d12a3f">
+          <ID>Wind Kph</ID>
+          <Name>Wind Kph</Name>
+          <SourceColumnID>Wind Kph</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="85ab113d-ceef-49a7-8f3e-c677e87b82ca">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceColumnID>Year</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="53162448-2a3c-4d1a-a09c-9c4dccbf3c44">
+      <ID>Navie Bayes</ID>
+      <Name>Navie Bayes</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="2ca9fd58-14df-479a-b5ec-1a29c5c5920e">
+          <ID>Air Quality Nitrogen Dioxide</ID>
+          <Name>Air Quality Nitrogen Dioxide</Name>
+          <SourceColumnID>Air Quality Nitrogen Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="db963a83-6c65-476f-b3b3-38f72d56541e">
+          <ID>Air Quality Ozone</ID>
+          <Name>Air Quality Ozone</Name>
+          <SourceColumnID>Air Quality Ozone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ce00324c-150b-4083-b488-e81ac2762211">
+          <ID>Air Quality PM2 5</ID>
+          <Name>Air Quality PM2 5</Name>
+          <SourceColumnID>Air Quality PM2 5</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3dcb4819-5cfa-4025-9145-53ff794dc5b7">
+          <ID>Air Quality Sulphur Dioxide</ID>
+          <Name>Air Quality Sulphur Dioxide</Name>
+          <SourceColumnID>Air Quality Sulphur Dioxide</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3ffbe070-a3c5-4222-ada0-a40194729501">
+          <ID>Cloud</ID>
+          <Name>Cloud</Name>
+          <SourceColumnID>Cloud</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="97f9a601-31fb-4070-813e-f4ae95ee40c6">
+          <ID>Condition Text</ID>
+          <Name>Condition Text</Name>
+          <SourceColumnID>Condition Text</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="50730222-2376-44b7-99bb-8d0fc6eda7c6">
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <SourceColumnID>Country</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="68dd140f-7391-4f35-98e7-9f069138ec98">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="471f13b3-b7bc-4ced-b7b4-0f2ac5fb4dba">
+          <ID>Location Name</ID>
+          <Name>Location Name</Name>
+          <SourceColumnID>Location Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b4afe304-fe96-44f6-9d83-8026ad1553f3">
+          <ID>Precip Mm</ID>
+          <Name>Precip Mm</Name>
+          <SourceColumnID>Precip Mm</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5a4f97fa-815d-42d1-81b7-bad17caeb752">
+          <ID>Timezone</ID>
+          <Name>Timezone</Name>
+          <SourceColumnID>Timezone</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a6761305-bc73-44e8-a2c9-bd5e1285dedc">
+          <ID>Uv Index</ID>
+          <Name>Uv Index</Name>
+          <SourceColumnID>Uv Index</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6547dafb-6270-447d-9206-b281056622d6">
+          <ID>Wind Direction</ID>
+          <Name>Wind Direction</Name>
+          <SourceColumnID>Wind Direction</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+  <ddl100_100:HoldoutMaxCases>1000</ddl100_100:HoldoutMaxCases>
+</MiningStructure>

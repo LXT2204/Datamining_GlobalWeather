@@ -1,0 +1,171 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="32e8d642-7cc5-4b68-835a-f1429c8db87f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Global Weather</ID>
+  <Name>Global Weather</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Global Weather</DataSourceID>
+  <Schema>
+    <xs:schema id="Global_x0020_Weather" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Global_x0020_Weather" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="777927e7-b67f-4b6a-98e9-05b676425f7d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Original_x0020_GlobalWeatherRepository" msprop:design-time-name="28173afb-e16d-4ddf-82a4-60f80d127880" msprop:DbTableName="Original GlobalWeatherRepository" msprop:FriendlyName="Original GlobalWeatherRepository" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_fact" msprop:design-time-name="a307ead7-b128-4600-adff-eaaf10915915" msprop:DbColumnName="id_fact" msprop:FriendlyName="id_fact">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="uv_index" msprop:design-time-name="9dec5bac-da0e-4f5d-8acc-f70923f53b9e" msprop:DbColumnName="uv_index" msprop:FriendlyName="uv_index">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="country" msprop:design-time-name="d19d5e95-9b6b-4f82-bf48-9e773d51bdf1" msprop:DbColumnName="country" msprop:FriendlyName="country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="location_name" msprop:design-time-name="4945003e-cbff-4299-9ed9-c67db0b6274f" msprop:DbColumnName="location_name" msprop:FriendlyName="location_name">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="latitude" msprop:design-time-name="60b1ea42-a94f-42bb-bc04-d8390546acc7" msprop:DbColumnName="latitude" msprop:FriendlyName="latitude" type="xs:double" />
+                  <xs:element name="longitude" msprop:design-time-name="92389cca-5f4f-437a-8279-a01a753f6ee2" msprop:DbColumnName="longitude" msprop:FriendlyName="longitude" type="xs:double" />
+                  <xs:element name="timezone" msprop:design-time-name="b22afd9b-cb5a-4cd4-840e-bb80428d9c1a" msprop:DbColumnName="timezone" msprop:FriendlyName="timezone">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="air_quality_Carbon_Monoxide" msprop:design-time-name="39c51e0a-bc33-4696-863c-60717c0d2830" msprop:DbColumnName="air_quality_Carbon_Monoxide" msprop:FriendlyName="air_quality_Carbon_Monoxide" type="xs:double" />
+                  <xs:element name="air_quality_Ozone" msprop:design-time-name="2c25fffe-eb3c-4fb8-81a6-e4574c7fe863" msprop:DbColumnName="air_quality_Ozone" msprop:FriendlyName="air_quality_Ozone">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="air_quality_Nitrogen_dioxide" msprop:design-time-name="cfc609e2-b797-44e8-9994-904b743b139a" msprop:DbColumnName="air_quality_Nitrogen_dioxide" msprop:FriendlyName="air_quality_Nitrogen_dioxide">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="air_quality_Sulphur_dioxide" msprop:design-time-name="7480bfd6-a13f-4cc2-8e78-493f6ceea2a8" msprop:DbColumnName="air_quality_Sulphur_dioxide" msprop:FriendlyName="air_quality_Sulphur_dioxide">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="air_quality_PM2_5" msprop:design-time-name="0fb2f427-9465-4b9f-aa75-f8e23bdaba33" msprop:DbColumnName="air_quality_PM2_5" msprop:FriendlyName="air_quality_PM2_5">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="air_quality_PM10" msprop:design-time-name="12d62d30-6c83-431d-ab55-6377527f58dd" msprop:DbColumnName="air_quality_PM10" msprop:FriendlyName="air_quality_PM10" type="xs:double" />
+                  <xs:element name="day" msprop:design-time-name="f03321ab-349d-4f78-9c6b-0f009382ecf4" msprop:DbColumnName="day" msprop:FriendlyName="day" type="xs:int" />
+                  <xs:element name="month" msprop:design-time-name="f61014e0-78e4-4df5-aa98-baad11616137" msprop:DbColumnName="month" msprop:FriendlyName="month" type="xs:int" />
+                  <xs:element name="year" msprop:design-time-name="2d73b884-d3ab-4649-a229-4292da288885" msprop:DbColumnName="year" msprop:FriendlyName="year" type="xs:int" />
+                  <xs:element name="time" msprop:design-time-name="d8523b6e-d881-4cd8-a76f-669ad8eb8a97" msprop:DbColumnName="time" msprop:FriendlyName="time" type="xs:dateTime" />
+                  <xs:element name="temperature_celsius" msprop:design-time-name="46f22efc-8deb-4541-94e9-bf270d362d0a" msprop:DbColumnName="temperature_celsius" msprop:FriendlyName="temperature_celsius" type="xs:double" />
+                  <xs:element name="condition_text" msprop:design-time-name="b9ca02c6-ebcf-4395-9f4c-2880a1363aba" msprop:DbColumnName="condition_text" msprop:FriendlyName="condition_text">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="feels_like_celsius" msprop:design-time-name="c95d3939-2bf6-4c4a-b9da-1e73c02cb710" msprop:DbColumnName="feels_like_celsius" msprop:FriendlyName="feels_like_celsius" type="xs:double" />
+                  <xs:element name="wind_kph" msprop:design-time-name="a13b3082-af45-4408-a0c9-94f997476c0a" msprop:DbColumnName="wind_kph" msprop:FriendlyName="wind_kph" type="xs:double" />
+                  <xs:element name="wind_degree" msprop:design-time-name="2666e1d4-a923-4c5a-bbab-810911e51cb7" msprop:DbColumnName="wind_degree" msprop:FriendlyName="wind_degree" type="xs:int" />
+                  <xs:element name="wind_direction" msprop:design-time-name="bc910a1e-8bba-4c14-89df-1a7dbd934e87" msprop:DbColumnName="wind_direction" msprop:FriendlyName="wind_direction">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="gust_kph" msprop:design-time-name="83c573a3-0512-457c-874e-9a6ce074825a" msprop:DbColumnName="gust_kph" msprop:FriendlyName="gust_kph" type="xs:double" />
+                  <xs:element name="pressure_mb" msprop:design-time-name="efcd5d01-2614-4536-8ee8-695cc9ce853a" msprop:DbColumnName="pressure_mb" msprop:FriendlyName="pressure_mb" type="xs:int" />
+                  <xs:element name="precip_mm" msprop:design-time-name="df440a05-88c4-4691-9c9d-7ff55a4f0d4a" msprop:DbColumnName="precip_mm" msprop:FriendlyName="precip_mm">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="humidity" msprop:design-time-name="3a469093-3d1f-4fa0-9879-edfa9f924454" msprop:DbColumnName="humidity" msprop:FriendlyName="humidity" type="xs:int" />
+                  <xs:element name="cloud" msprop:design-time-name="2a4b7b39-ea98-4821-ba8f-116ad6e7c89a" msprop:DbColumnName="cloud" msprop:FriendlyName="cloud">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="visibility_km" msprop:design-time-name="a0bad296-f61c-4452-b11d-1a9c05fdbbcc" msprop:DbColumnName="visibility_km" msprop:FriendlyName="visibility_km" type="xs:double" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <Global_x0020_Weather xmlns="" />
+  </Schema>
+</DataSourceView>
